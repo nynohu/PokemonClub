@@ -14,6 +14,11 @@
 		6582ABD129C5F8A5001DB610 /* PokemonClubTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6582ABD029C5F8A5001DB610 /* PokemonClubTests.swift */; };
 		6582ABDB29C5F8A5001DB610 /* PokemonClubUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6582ABDA29C5F8A5001DB610 /* PokemonClubUITests.swift */; };
 		6582ABDD29C5F8A5001DB610 /* PokemonClubUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6582ABDC29C5F8A5001DB610 /* PokemonClubUITestsLaunchTests.swift */; };
+		6582ABEB29C5FE8A001DB610 /* DeviceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6582ABEA29C5FE8A001DB610 /* DeviceType.swift */; };
+		6582ABED29C5FEBE001DB610 /* AppEnvironmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6582ABEC29C5FEBE001DB610 /* AppEnvironmentType.swift */; };
+		6582ABF029C6032E001DB610 /* AppEnvironmentTypeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6582ABEF29C6032E001DB610 /* AppEnvironmentTypeTests.swift */; };
+		6582ABF629C60391001DB610 /* Nimble in Frameworks */ = {isa = PBXBuildFile; productRef = 6582ABF529C60391001DB610 /* Nimble */; };
+		6582ABF829C60D12001DB610 /* AppEnvinronment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6582ABF729C60D12001DB610 /* AppEnvinronment.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +50,10 @@
 		6582ABD629C5F8A5001DB610 /* PokemonClubUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokemonClubUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6582ABDA29C5F8A5001DB610 /* PokemonClubUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonClubUITests.swift; sourceTree = "<group>"; };
 		6582ABDC29C5F8A5001DB610 /* PokemonClubUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokemonClubUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		6582ABEA29C5FE8A001DB610 /* DeviceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceType.swift; sourceTree = "<group>"; };
+		6582ABEC29C5FEBE001DB610 /* AppEnvironmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironmentType.swift; sourceTree = "<group>"; };
+		6582ABEF29C6032E001DB610 /* AppEnvironmentTypeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvironmentTypeTests.swift; sourceTree = "<group>"; };
+		6582ABF729C60D12001DB610 /* AppEnvinronment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppEnvinronment.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6582ABF629C60391001DB610 /* Nimble in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				6582ABBE29C5F8A4001DB610 /* PokemonClubApp.swift */,
+				6582ABE929C5FE6D001DB610 /* Environment */,
 				6582ABC029C5F8A4001DB610 /* ContentView.swift */,
 				6582ABC229C5F8A5001DB610 /* Assets.xcassets */,
 				6582ABC429C5F8A5001DB610 /* PokemonClub.entitlements */,
@@ -115,6 +126,7 @@
 		6582ABCF29C5F8A5001DB610 /* PokemonClubTests */ = {
 			isa = PBXGroup;
 			children = (
+				6582ABEE29C6030D001DB610 /* Environment */,
 				6582ABD029C5F8A5001DB610 /* PokemonClubTests.swift */,
 			);
 			path = PokemonClubTests;
@@ -127,6 +139,24 @@
 				6582ABDC29C5F8A5001DB610 /* PokemonClubUITestsLaunchTests.swift */,
 			);
 			path = PokemonClubUITests;
+			sourceTree = "<group>";
+		};
+		6582ABE929C5FE6D001DB610 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				6582ABEA29C5FE8A001DB610 /* DeviceType.swift */,
+				6582ABEC29C5FEBE001DB610 /* AppEnvironmentType.swift */,
+				6582ABF729C60D12001DB610 /* AppEnvinronment.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+		6582ABEE29C6030D001DB610 /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				6582ABEF29C6032E001DB610 /* AppEnvironmentTypeTests.swift */,
+			);
+			path = Environment;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,6 +175,8 @@
 			dependencies = (
 			);
 			name = PokemonClub;
+			packageProductDependencies = (
+			);
 			productName = PokemonClub;
 			productReference = 6582ABBB29C5F8A4001DB610 /* PokemonClub.app */;
 			productType = "com.apple.product-type.application";
@@ -163,6 +195,9 @@
 				6582ABCE29C5F8A5001DB610 /* PBXTargetDependency */,
 			);
 			name = PokemonClubTests;
+			packageProductDependencies = (
+				6582ABF529C60391001DB610 /* Nimble */,
+			);
 			productName = PokemonClubTests;
 			productReference = 6582ABCC29C5F8A5001DB610 /* PokemonClubTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -217,6 +252,9 @@
 				Base,
 			);
 			mainGroup = 6582ABB229C5F8A4001DB610;
+			packageReferences = (
+				6582ABF429C60391001DB610 /* XCRemoteSwiftPackageReference "Nimble" */,
+			);
 			productRefGroup = 6582ABBC29C5F8A4001DB610 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -259,8 +297,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6582ABEB29C5FE8A001DB610 /* DeviceType.swift in Sources */,
 				6582ABC129C5F8A4001DB610 /* ContentView.swift in Sources */,
 				6582ABBF29C5F8A4001DB610 /* PokemonClubApp.swift in Sources */,
+				6582ABF829C60D12001DB610 /* AppEnvinronment.swift in Sources */,
+				6582ABED29C5FEBE001DB610 /* AppEnvironmentType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6582ABD129C5F8A5001DB610 /* PokemonClubTests.swift in Sources */,
+				6582ABF029C6032E001DB610 /* AppEnvironmentTypeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -614,6 +656,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6582ABF429C60391001DB610 /* XCRemoteSwiftPackageReference "Nimble" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Quick/Nimble";
+			requirement = {
+				kind = exactVersion;
+				version = 11.2.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6582ABF529C60391001DB610 /* Nimble */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6582ABF429C60391001DB610 /* XCRemoteSwiftPackageReference "Nimble" */;
+			productName = Nimble;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6582ABB329C5F8A4001DB610 /* Project object */;
 }
