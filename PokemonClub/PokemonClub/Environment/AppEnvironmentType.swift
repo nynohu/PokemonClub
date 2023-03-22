@@ -19,7 +19,7 @@ enum AppEnvironmentType {
         case .debug:
             return "https://pokeapi.co/api/v2/"
         case .development:
-            return "localhost/api/v2/"
+            return "http://localhost:80/api/v2/"
         }
     }
 }

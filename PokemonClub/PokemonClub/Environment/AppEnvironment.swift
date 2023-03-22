@@ -7,14 +7,16 @@
 
 import Foundation
 
-struct AppEnvinronment {
+struct AppEnvironment: Environment {
     var currentScheme: AppEnvironmentType {
 #if RELEASE
         return .release
 #elseif DEBUG
         return .debug
-#else
+#elseif DEVELOPMENT
         return .development
+#else
+        return .debug
 #endif
     }
     

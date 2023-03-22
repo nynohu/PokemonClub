@@ -16,6 +16,6 @@ class AppEnvironmentTypeTests: XCTestCase {
         expect(AppEnvironmentType.debug.basePath)
             .to(equal("https://pokeapi.co/api/v2/"))
         expect(AppEnvironmentType.development.basePath)
-            .to(equal("localhost/api/v2/"))
+            .to(equal("http://localhost:80/api/v2/"))
     }
 }
