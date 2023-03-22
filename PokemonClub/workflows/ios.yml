@@ -1,0 +1,21 @@
+name: iOS CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install dependencies
+        run: swift package resolve
+      - name: Test
+        run: xcodebuild test -scheme PokemonClub -destination 'platform=iOS Simulator,name=iPhone 14 Pro' -sdk iphonesimulator -enableCodeCoverage YES
+      - name: Build
+        run: swift build --package-path PokemonClub.xcodeproj
